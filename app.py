@@ -6,6 +6,8 @@ from io import BytesIO
 import time
 import io
 
+key = st.secrets("HF_KEY")
+
 # Define a function to generate image captions
 def generate_caption(image):
 
@@ -16,7 +18,7 @@ def generate_caption(image):
     import requests
 
     API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-large"
-    headers = {"Authorization": "Bearer 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"}
+    headers = {"Authorization": "{}".format(HF_KEY)}
 
     def query(image):
         response = requests.post(API_URL, headers=headers, data=image)
