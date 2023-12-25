@@ -6,7 +6,7 @@ from io import BytesIO
 import time
 import io
 
-key = st.secrets("HF_KEY")
+key = st.secrets.HF_KEY
 
 # Define a function to generate image captions
 def generate_caption(image):
