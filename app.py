@@ -18,7 +18,7 @@ def generate_caption(image):
     import requests
 
     API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-large"
-    headers = {"Authorization": "{}".format(key)}
+    headers = {"Authorization": "Bearer {}".format(key)}
 
     def query(image):
         response = requests.post(API_URL, headers=headers, data=image)
