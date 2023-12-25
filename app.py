@@ -52,6 +52,7 @@ else:
 
 # Display the image and caption
 if image is not None:
+    image = image.resize(300,200)
     st.image(image, caption="Uploaded Image", use_column_width=True)
     st.write("Generating caption...")
     progress_bar = st.progress(0)
